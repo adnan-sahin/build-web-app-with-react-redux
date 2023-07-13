@@ -34,6 +34,7 @@ class CoursesPage extends React.Component {
 }
 
 CoursesPage.propTypes = {
+  authors: PropTypes.array.isRequired,
   courses: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,
 };
@@ -46,7 +47,6 @@ function mapStateToProps(state) {
         : state.courses.map((course) => {
             return {
               ...course,
-
               authorName: state.authors.find((a) => a.id == course.authorId)
                 .name,
             };
