@@ -51,7 +51,7 @@ const CourseForm = ({
         disabled={saving}
         className="btn btn-primary"
       >
-        {saving ? "Saving" : "Save"}
+        {saving ? "Saving..." : "Save"}
       </button>
     </form>
   );
